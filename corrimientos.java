@@ -46,6 +46,7 @@ public class corrimientos {
       for (int i = pos; i < C - 1; i++) {
         arr[i] = arr[i + 1];
       }
+      // Esto es así porque el corrimiento se hace desde el extremo, si se hiciese desde una posicion x, arr[x] = SEPARADOR
       arr[C - 1] = SEPARADOR;
     }
   }
@@ -54,7 +55,7 @@ public class corrimientos {
       for (int i = C - 1; i > pos; i--) {
         arr[i] = arr[i - 1];
       }
-      arr[0] = SEPARADOR;
+      arr[pos] = SEPARADOR;
     }
   }
 

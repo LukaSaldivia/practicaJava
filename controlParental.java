@@ -165,6 +165,7 @@ public class controlParental {
       for (int i = pos; i < C - 1; i++) {
         arr[i] = arr[i + 1];
       }
+      arr[C - 1] = SEPARADOR;
     }
   }
   
@@ -173,6 +174,7 @@ public class controlParental {
       for (int i = C - 1; i > pos; i--) {
         arr[i] = arr[i - 1];
       }
+      arr[pos] = SEPARADOR;
     }
   }
 
