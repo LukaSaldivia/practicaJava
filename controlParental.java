@@ -20,46 +20,47 @@ public class controlParental {
     char[] filtros = toArray(_filtros);
     char[] reemplazos = toArray(_reemplazos);
     
+    console("");
     mostrar(msj);
-
+    
     int ini = 0, fin = -1, ini_filtro = 0, fin_filtro = -1, ini_reemplazo = 0, fin_reemplazo = -1, indice_filtro = 0;
     int largo, largo_filtro, largo_reemplazo;
     boolean coinciden = false;
-
+    
     // Recorrida de secuencias de msj
     while (ini < C) {
       ini = buscarIni(msj, fin + 1);
-
+      
       if(ini < C){
         fin = buscarFin(msj, ini);
-
-          // Recorrida de secuencias de filtros por cada secuencia de msj
-          while (ini_filtro < C && !coinciden) {
-
+        
+        // Recorrida de secuencias de filtros por cada secuencia de msj
+        while (ini_filtro < C && !coinciden) {
+          
             ini_filtro = buscarIni(filtros, fin_filtro + 1);
-
+            
             if (ini_filtro < C) {
               fin_filtro = buscarFin(filtros, ini_filtro);
-
+              
               largo = getLength(ini, fin);
               largo_filtro = getLength(ini_filtro, fin_filtro);
-
+              
               if (largo == largo_filtro && sonSecuenciasIguales(msj, filtros, ini, ini_filtro, largo)) {
                 coinciden = true;
                 ini_reemplazo = buscarIni(reemplazos, fin_reemplazo + 1, indice_filtro + 1);
-
+                
                 if (ini_reemplazo < C) {
                   fin_reemplazo = buscarFin(reemplazos, ini_reemplazo);
-
+                  
                   largo_reemplazo = getLength(ini_reemplazo, fin_reemplazo);
-
+                  
                   corrimientoIzq(msj, ini, largo_filtro);
                   corrimientoDer(msj, ini, largo_reemplazo);
-
+                  
                   for (int j = 0; j < largo_reemplazo; j++) {
                     msj[ini + j] = reemplazos[ini_reemplazo + j];
                   }
-
+                  
                   fin -= largo_reemplazo;
                 }
               }
@@ -72,21 +73,22 @@ public class controlParental {
           ini_filtro = 0; fin_filtro = -1;
           coinciden = false;
           indice_filtro = 0;
-
-      }
+          
+        }
     }
-
+    
+    console("\nDespués del control:\n");
     mostrar(msj);
     
   }
 
   public static void mostrar(char[] arr){
     for (int i = 0; i < C; i++)
-      if (arr[i] == SEPARADOR)
-        System.out.print("_ ");
-      else
-        System.out.print(arr[i] + " ");
-
+    if (arr[i] == SEPARADOR)
+    System.out.print("_ ");
+    else
+    System.out.print(arr[i] + " ");
+    
     System.out.println(' ');
   }
 
