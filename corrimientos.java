@@ -4,9 +4,12 @@ public class corrimientos {
   public static void main(String[] args) {
     int[] arr = {0,0,2,2,2,2,2,0};
 
+    msg("Arreglo original");
     mostrar(arr);
+    msg("Corrimiento hacia derecha : 1 vez");
     corrimientoDer(arr, 0, 1);
     mostrar(arr);
+    msg("Corrimiento hacia izquierda : 4 veces");
     corrimientoIzq(arr, 0, 4);
     mostrar(arr);
 
@@ -51,5 +54,9 @@ public class corrimientos {
       }
       arr[0] = SEPARADOR;
     }
+  }
+
+  public static void msg(String msg){
+    System.out.println(msg);
   }
 }

@@ -4,8 +4,8 @@ public class secuenciaAscendente { //sin estructuras auxiliares
   final static int C = 15, SEPARADOR = 0;
 
   public static void main(String[] args) {
-    // int[] arr = {SEPARADOR,1,2,3,4,SEPARADOR,SEPARADOR,5,6,3,SEPARADOR,1,2,3,4};
-    int[] arr = {1,1,2,5, SEPARADOR,4,5,5,6,SEPARADOR,1,10,SEPARADOR,3,1};
+    int[] arr = {SEPARADOR,1,2,3,4,SEPARADOR,SEPARADOR,5,6,3,SEPARADOR,1,2,3,4};
+    // int[] arr = {1,1,2,5, SEPARADOR,4,5,5,6,SEPARADOR,1,10,SEPARADOR,3,1};
     mostrar(arr);
     
 
