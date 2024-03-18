@@ -19,7 +19,7 @@ public class invertirSec {
         }
 
         if (contador == N) {
-          invertirSec(arr, ini, fin);
+          invertirSecuencia(arr, ini, fin);
         }
 
 
@@ -60,7 +60,7 @@ public class invertirSec {
     return n % d == 0;
   }
 
-  public static void invertirSec(int[] arr, int ini, int fin){
+  public static void invertirSecuencia(int[] arr, int ini, int fin){
     int aux;
     while (ini < fin) {
       aux = arr[ini];
