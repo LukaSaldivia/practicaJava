@@ -1,3 +1,5 @@
+// Dada una matriz con palabras de C*F, eliminarlas de la matriz y ordenarlas alfabetica en un arreglo de C*F
+
 public class ordenarPalabras {
   final static int C = 15, F = 4, A = C*F;
   final static int ABC_LENGTH = 27;

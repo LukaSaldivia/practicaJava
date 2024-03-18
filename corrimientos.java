@@ -1,3 +1,5 @@
+// ❗ Si después necesitas seguir recorriendo secuencias, recordar restar fin - #corrimientos
+
 public class corrimientos {
   final static int C = 8, SEPARADOR = 0;
 
