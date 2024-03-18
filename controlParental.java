@@ -12,6 +12,7 @@ public class controlParental {
 
     String _msj = "Hijo de puta te fuiste al choto Ulises             ";
     // String _msj = "Forro de mierda te fuiste al choto Ulises          ";
+    // String _msj = "mierda forro puta puta choto mierda                ";
     String _filtros = "  puta    choto forro        mierda               ";
     String _reemplazos = "      madre      pene          malo     caca      ";
 
@@ -76,6 +77,7 @@ public class controlParental {
           
         }
     }
+
     
     console("\nDespués del control:\n");
     mostrar(msj);
